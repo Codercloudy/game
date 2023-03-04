@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               
+          
+      function getComputerChoice () {
+            
+            let randomInt=Math.floor(Math.random()*3);
+            if (randomInt === 0) {
+                computerSelection = "Rock";
+            }
+            else if (randomInt === 1) {
+                computerSelection = "Paper";
+        }
+            else 
+            { computerSelection = "Scissors" } ;
+            return computerSelection; 
+}
+        
+        function playRound(){
+            const playerSelection = "Rock";
+            const computerSelection = getComputerChoice()
+            let resultGame = "" ;
+            if (playerSelection === computerSelection){
+            
+                resultGame = "It's a tie!";
+            }
+            else if (playerSelection && (computerSelection === "Scissors") ) {
+                resultGame = "You win!";
+            }
+            else {
+                resultGame = "You lose!!!!!!!!!"
+            }
+        
+            
+            console.log(resultGame)
+
+        } 
+        
+        
+        
+
+    
+        for (let i = 0; i < 5; i++) {
+            playRound()
+          
+            
+        }
+ 
+    </script>
+    
+</body>
+</html>
